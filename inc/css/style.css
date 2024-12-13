@@ -1,162 +1,91 @@
-div.main-nav{
-    float: left;
-    width: 100%;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-div.iPadMenu{
-    position: relative; 
-    overflow: hidden;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
 }
-div.iPadMenu ul{
-    float: left;
-    /*        -webkit-transition: all 200ms linear 80ms;
-            -moz-transition: all 200ms linear 80ms;
-            -ms-transition: all 200ms linear 80ms;
-            -o-transition: all 200ms linear 80ms;
-            transition: all 200ms linear 80ms;*/
+
+/* Navigation Styles */
+.main-navigation {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.menu-toggle {
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.menu-container {
     overflow: hidden;
     height: 0;
-    position: absolute;
-    padding:0;
-    margin:0;
-    background: #f4f4f4;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    width:0px;
-    padding-top:50px;
+    transition: height 0.3s ease;
 }
-body div.iPadMenu > ul{
-    width:100%;
+
+.menu {
+    list-style: none;
+    padding: 10px;
+    background-color: #fff;
 }
-div.iPadMenu  li{
-    background: #f4f4f4;
-    float: left;
-    width: 100%;
+
+.menu > li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-link {
     display: block;
-    padding: 5px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px 15px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
 }
-div.iPadMenu li.subtitle{
-    /*background: #000 url("../img/nav/item-arrow-left.png") no-repeat 20px center;*/
-    text-align:center;
-}
-div.iPadMenu li a{
+
+.menu-link:hover,
+.menu-link.active {
+    background-color: #007BFF;
     color: #fff;
-    font-family: "Arial";
-    white-space: nowrap;
+}
 
-}
-div.iPadMenu li.subtitle a{
-    text-decoration: underline;
-}
-body div.iPadMenu .go-to-sub-menu{
-    float: right;
-    width: 20px;
-    height: 20px;
-    background: #000;
-}
-div.iPadMenu .go-to-sub-menu,
-div.iPadMenu li a{
-    text-overflow: ellipsis;
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    height: 0;
     overflow: hidden;
-    line-height: 1.15em;
-    padding: 15px 10px 15px 20px;
-    text-transform: uppercase;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    color: #111;
-    background: #f4f4f4;
-    display:block;
-    cursor:pointer;
-    white-space: nowrap;
-    float: left;
-    z-index:1;
+    transition: height 0.3s ease;
 }
 
-div.iPadMenu ul li span.active-trail,
-div.iPadMenu ul li a.active-trail {
-    color: #D41D0A;
-}
-div.iPadMenu span.back_to_parent{
-    float: right;
-    width: 50px;
-    font-size:28px;
-    text-indent: -99996px;
-    height:69px;
-    background: red;
-    cursor:pointer;
-}
-div.iPadMenu div.Social_Ticker{
-    height:110px;
-    width:100%;
-    position:relative;
-}
-#navbar div.iPadMenu div.Social_Ticker ul{
-    position:relative;
-    height:55px !important;
-    width:100% !important;
-    left:0;
-    padding-top:19px;
-    margin-top:0px;
-    float:left;
-    margin-bottom:0;
-}
-div.iPadMenu div.Social_Ticker ul.shop-nav li{
-    display: inline-block;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-weight: bold;
-    padding: 4px 14px;
-    background: url('../img/bg/1x1-bg-black-opac0.3.png') repeat left top;
-    background-color: rgba(0, 0, 0, 0);
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    -o-border-radius: 14px;
-    border-radius: 14px;
-    border-bottom-style: none;
-
-}
-div.iPadMenu div.Social_Ticker ul.shop-nav li a {
-    padding: 0;
-    padding-left: 22px;
-    color: #FFF;
+.submenu-link {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
     font-size: 14px;
-    text-transform: none;
-    display: inline-block;
 }
-div.iPadMenu div.Social_Ticker ul.top-nav li{
-    text-align: center;
-    float: none;
-    width: auto;
-    display: none;
-    background: rgba(0, 0, 0, 0);
+
+.submenu-link:hover {
+    color: #007BFF;
 }
-div.iPadMenu div.Social_Ticker ul.top-nav li a{
-    padding:10px 3px;
-}
-div.iPadMenu div.Social_Ticker ul.top-nav{
-    text-align:center;
-    padding-top: 0 !important;
-    background:#000;
-}
-div.iPadMenu div.Social_Ticker ul.top-nav li.SocialNetowrk
-{
-    display: inline-block;
-    padding-top:0px;
-}
-html.iPadMenuOpen,
-body.iPadMenuOpen{
-    height:100%;
-    width:100%;
-    overflow:hidden;
-}
-div.iPadMenu .dropdown-menu{
-    display:block;
-}
-div.iPadMenu .dropdown-menu li{
-    display:block;
-    float:left;
-}
-header#navbar div.iPadMenu{
-    display:block !important;
+
+.submenu-toggle {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    float: right;
 }
