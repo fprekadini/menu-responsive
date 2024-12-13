@@ -1,69 +1,50 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="inc/css/style.css" />
-        <script type="text/javascript" src="inc/js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="inc/js/TweenMax.js"></script>
-        <script type="text/javascript" src="inc/js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Menu</title>
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <script src="assets/js/vendor/jquery-1.10.2.min.js" defer></script>
+        <script src="assets/js/vendor/gsap.min.js" defer></script>
+        <script src="assets/js/main.js" defer></script>
     </head>
     <body>
-        <div class="center">
-            <div class="main-nav">
-                <div class="mmenu">Meny</div>
-                <div class="iPadMenu">
-                    <ul class="nav">
-                        <li>                        
-                            <a class="active" href="" title="Ballina">Ballina</a>
-                        </li>
-                        <li>                        
-                            <a href="" title="Rreth Nesh">Rreth Nesh</a>
-                            <span class="go-to-sub-menu"></span>
-                            <ul class="sub-section hasChild">
-                                <li>
-                                    <span class="back_to_parent">back</span>
-                                    <a href="">Rreth Nesh</a>
-                                </li>
-                                <li>
-                                    <a href="">Historia e kompanisë</a>
-                                </li>
-                                <li>
-                                    <a href="">Organogrami</a>
-                                </li>
-                                <li>
-                                    <a href="">Kontakti</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" title="Projektet Tona">Projektet Tona</a>
-                            <span class="go-to-sub-menu"></span>
-                            <ul class="sub-section hasChild">
-                                <li>
-                                    <span class="back_to_parent">back</span>
-                                    <a href="">Projektet tona</a>
-                                </li>
-                                <li>
-                                    <a href="http://art-ing.biz/sq/lakrishte">Lakrishte</a>
-                                    <span class="go-to-sub-menu"></span>
-                                    <ul class="sub-sub-section hasChild">
-                                        <li>
-                                            <span class="back_to_parent">back</span>
-                                            <a href="">Lakrishte</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="main-navigation">
+            <button class="menu-toggle">Menu</button>
+            <div class="menu-container">
+                <ul class="menu">
+                    <li>
+                        <a class="active" href="#" title="Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" title="About Us">About Us</a>
+                        <button class="submenu-toggle" aria-label="Expand About Us submenu"></button>
+                        <ul class="submenu">
+                            <li><button class="back-button">Back</button></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="Projects">Projects</a>
+                        <button class="submenu-toggle" aria-label="Expand Projects submenu"></button>
+                        <ul class="submenu">
+                            <li><button class="back-button">Back</button></li>
+                            <li><a href="#">All Projects</a></li>
+                            <li>
+                                <a href="#" title="Lakrishte">Lakrishte</a>
+                                <button class="submenu-toggle" aria-label="Expand Lakrishte submenu"></button>
+                                <ul class="submenu">
+                                    <li><button class="back-button">Back</button></li>
+                                    <li><a href="#">Details</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </body>
 </html>
